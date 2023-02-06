@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
+import MagicBox from './pages/MagicBox';
+import Login from './pages/Login';
+import SignUp from './pages/Signup';
+import Header from './header/header';
+import { AuthProvider } from './context/AuthContext';
+import BoxView from './pages/boxes/boxView';
+import SearchPage from './pages/Search';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <Header />
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/" element={<PrivateRoute>
+            <MagicBox />
+          </PrivateRoute>} />
+          <Route path="/box" element={<PrivateRoute>
+            <BoxView />
+          </PrivateRoute>} />
+          <Route path="/search" element={<PrivateRoute>
+            <SearchPage />
+          </PrivateRoute>} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </AuthProvider>
+    </BrowserRouter>
+    
   );
 }
 

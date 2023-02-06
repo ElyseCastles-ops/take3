@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "RalewayRegular";
+  src: local("RalewayRegular"), url("./assets/fonts/Raleway.ttf") format("truetype");
+  font-weight: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+    font-family: "RalewayRegular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +18,1005 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h2 {
+  font-family: "RalewayRegular";
+  width: fit-content;
+  margin: 0px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.mb-d-flex {
+  display: flex;
+}
+
+.mb-flex-row {
+  flex-direction: row;
+}
+
+.mb-flex-col {
+  flex-direction: column;
+}
+
+.mb-align-items-center {
+  align-items: center;
+}
+
+.mb-align-items-baseline {
+  align-items: baseline;
+}
+
+.mb-align-items-end {
+  align-items: flex-end;
+}
+
+.mb-align-items-start {
+  align-items: flex-start;
+}
+
+.mb-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.mb-justify-between {
+  justify-content: space-between;
+}
+
+.mb-justify-center {
+  justify-content: center;
+}
+
+.mb-justify-end {
+  justify-content: flex-end;
+}
+
+.mb-justify-start {
+  justify-content: flex-start;
+}
+
+.mb-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.mb-gap-10 {
+  gap: 10px;
+}
+
+.mb-button {
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thin;
+  min-width: 30px;
+  height: 30px;
+  width: 75px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "RalewayRegular";
+  font-size: 20px;
+  line-height: 20px;
+  
+}
+
+.mb-inline-button {
+  margin: 0 auto 0 0;
+}
+
+
+/* .mb-button:first-child {
+  margin-left: 0px;
+}
+
+.mb-button:last-child {
+  margin-right: 0px;
+} */
+
+.mb-button p {
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+}
+
+.mb-button.red.selected {
+  background-color: red;
+}
+
+.mb-button.blue.selected {
+  background-color: blue;
+}
+
+.mb-button.black.selected {
+  background-color: black;
+}
+
+.mb-button.white.selected {
+  background-color: white;
+}
+
+.mb-button.green.selected {
+  background-color: green;
+}
+
+
+.mb-button-primary {
+  background-color: #8FD7AC;
+  color: black;
+  border-radius: 10px;
+  min-width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: "RalewayRegular";
+  width: fit-content;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.mb-button-primary:hover {
+  cursor: pointer;
+}
+
+.mb-button-primary p {
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+}
+
+.mb-button-secondary {
+  border: #8FD7AC;
+  color: #8FD7AC;
+  border-radius: 10px;
+  border-style: solid;
+  box-sizing: content-box;
+  min-width: 26px;
+  height: 26px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: "RalewayRegular";
+  width:  fit-content;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.mb-button-secondary p {
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+}
+
+.mb-button-secondary:hover {
+  cursor: pointer;
+}
+
+.mb-button-sm p {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.mb-button-xs {
+  height: 15px;
+  width: 15px;
+  min-width: 15px;
+  border-radius: 5px;
+}
+
+.mb-button-xl {
+  height: 35px;
+  width: 100%;
+  margin: 0px;
+  border: none;
+}
+
+.mb-button-xs p {
+  font-size: 10px;
+  line-height: 10px;
+  min-width: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.mb-button-primary.mb-button-sm {
+  height: 20px;
+}
+
+.mb-button-secondary.mb-button-sm {
+  height: 16px;
+}
+
+.mb-back-color-black {
+  background-color: black;
+}
+
+.mb-font-color-white {
+  color: white;
+}
+
+.mb-input-long {
+  width: 100%;
+  font-family: "RalewayRegular";
+  /* width:  fit-content; */
+  font-size: 15px;
+  line-height: 15px;
+  margin-bottom: 10px;
+}
+
+.mb-input-short {
+  width: calc(50% - 10px);
+  font-family: "RalewayRegular";
+  /* width:  fit-content; */
+  font-size: 15px;
+  line-height: 15px;
+  margin-bottom: 10px;
+}
+
+.mb-short-l {
+  margin-right: 10px;
+}
+
+.mb-short-r {
+  margin-left: 10px;
+}
+
+.mb-input-label p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.mb-text-left {
+  text-align: left;
+}
+
+.mb-font {
+  font-family: "RalewayRegular";
+  width:  fit-content;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.mb-font-sm h3, p {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.mb-mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.mb-mx-60 {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.mb-mb-0 {
+  margin-bottom: 0px;
+}
+
+.mb-mb-20 {
+  margin-bottom: 20px;
+}
+
+
+
+.mb-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #2726265e
+}
+
+.mb-modal.visible {
+  display: flex;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+}
+
+.mb-modal-content {
+  /* TODO: width needs to be larger for mobile screens */
+  margin: 30px;
+  max-height: 500px;
+  width: 75%;
+  max-width: 615px;
+  background-color: white;
+}
+
+.mb-modal-body {
+  color: gray;
+  max-height: calc(500px - 80px - 60px);
+  overflow-y: scroll;
+}
+
+.mb-modal-header {
+  margin: 0px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "RalewayRegular";
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  height: 40px;
+}
+
+.mb-modal-header .mb-button-secondary {
+  margin-right: 0px;
+}
+
+.mb-modal-box-type-select {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.mb-modal-input-color {
+  padding: 5px;
+  margin-right: 10px;
+  padding: 0px;
+  height: fit-content;
+}
+
+
+
+/* *******************************************************
+**********************************************************
+*********************** HEADER ***************************
+**********************************************************
+******************************************************* */
+
+.header {
+  top: 0;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+
+#header-title p {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "RalewayRegular";
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+}
+
+/*TODO: add highlight on header title hover*/
+
+.nav-user-management {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.login-signup-button,
+.logout-button {
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  font-family: "RalewayRegular";
+  color: white;
+  background-color: transparent;
+  font-size: 1em;
+}
+
+.login-signup-button:hover,
+.logout-button:hover {
+  opacity: 0.8;
+}
+
+
+.mglass {
+	display: inline-block;
+	pointer-events: none;
+  align-self: center;
+  margin-right: 5px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+
+.searchbutton {
+	/* position: absolute; */
+  height: 22px;
+	font-size: 22px;
+	/* width: 100%; */
+	margin: 0;
+	padding: 0;
+  color: white
+}
+
+.search:focus + .searchbutton {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	background-color: white;
+	color: black;
+}
+
+.search {
+	/* position: absolute; */
+	left: 49px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+	background-color: white;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 0;
+  height: 22px;
+  align-self: center;
+	/* height: 100%; */
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+.search:focus {
+	width: 363px; /* Bar width+1px */
+	padding: 0 16px 0 0;
+}
+
+/* .expandright {
+	left: auto;
+	right: 49px;
+} */
+
+.expandright:focus {
+	padding: 0 0 0 16px;
+}
+
+
+
+/* *******************************************************
+**********************************************************
+******************* Login/Signup Page*********************
+**********************************************************
+******************************************************* */
+
+.login-box, 
+.signup-box {
+  display: flex;
+  margin: auto;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  max-width: 400px;
+}
+
+.password-input {
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.password-input p {
+  margin: 0;
+  color: #8FD7AC;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.password-input p:hover {
+  color: black;
+  cursor: pointer;
+}
+
+/* .mb-login-box,
+.mb-signup-box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: aquamarine;
+  padding: 10%;
+}
+
+@media screen and (min-width: 780px) { 
+  .mb-login-box,
+  .mb-signup-box {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 5%;
+  }
+} */
+
+#login-page-header,
+#signup-page-header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: left;
+}
+
+#login-page-header h2,
+#signup-page-header h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.login-body,
+.signup-body {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+
+.login-content,
+.signup-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #D9D9D9;
+}
+
+.login-content h3,
+.signup-content h3 {
+  margin-bottom: 0;
+  margin-top: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.login-content h3:first-child,
+.signup-content h3:first-child {
+  margin-top: 10px;
+}
+
+.login-signup-input {
+  width: calc(100% - 30px);
+  height: 35px;
+  padding: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-signup-input:focus {
+  outline: none;
+}
+
+.login-footer, 
+.signup-footer {
+  margin-top: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 30px;
+}
+
+.signup-link,
+.login-link {
+  color: #8FD7AC;
+}
+
+.signup-link:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
+/* *******************************************************
+**********************************************************
+**************** Home Page - Logged In********************
+**********************************************************
+******************************************************* */
+
+/* .mb-home-logged-in {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+} */
+
+.box-category {
+  display: flex;
+  flex-direction: column;
+}
+
+/* *******************************************************
+**********************************************************
+********************* Boxes Component*********************
+**********************************************************
+******************************************************* */
+
+.boxes-title:hover,
+.boxes-title:hover .dropdown-arrow .arrow {
+  cursor: pointer;
+  color: #8FD7AC;
+  border-color: #8FD7AC;
+}
+
+.box {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 100%;
+  height: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  background-color: #8FD7AC;
+  flex-basis: 33.333333%;
+}
+
+.box:hover {
+  opacity: 0.8;
+}
+
+.box-name {
+  max-height: 55px;
+}
+
+.box-name span {
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-top: 25px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.box-star {
+  max-height: 55px;
+}
+
+.box-star p {
+  font-size: 30px;
+  line-height: 30px;
+  /* margin-top: 25px !important;
+  margin-right: 25px !important; */
+}
+
+.box-footer {
+  margin-left: 25px;
+  margin-bottom: 25px;
+  display: none;
+}
+
+.box-trash {
+  margin-right: 25px;
+}
+
+.box:hover {
+  cursor: pointer;
+}
+
+.box:hover .box-name, 
+.box.hover .box-name { text-decoration: underline; cursor: pointer; }
+
+.box:hover .box-footer,
+.box.hover .box-footer { display: flex;}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: transform 0.1s linear;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.box-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 900px;
+}
+
+.box-list.hide {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.dropdown-arrow {
+  padding: 5px;
+}
+
+.dropdown-arrow.arrow.right {
+  height: 15px;
+  width: 15px;
+}
+
+.mb-star-icon {
+  font-size: 35px;
+  line-height: 35px;
+}
+
+.mb-star-icon:hover {
+  color: #8FD7AC;
+  cursor: pointer;
+}
+
+.mb-star-icon p {
+  margin: 0;
+}
+
+.trash-icon {
+  width: 10px;
+  height: 10px;
+  display: none;
+}
+
+.trash-icon.large {
+  width: 20px;
+  height: 20px;
+}
+
+.trash-icon:hover {
+  cursor: pointer;
+  stroke: #8FD7AC;
+  /* fill: #8FD7AC;
+  display: block; */
+}
+
+.box:hover .trash-icon, .box.hover .trash-icon { display: flex; }
+
+
+
+/* *******************************************************
+**********************************************************
+******************** Multi Component**********************
+**********************************************************
+******************************************************* */
+
+.page-content {
+  top: 50px;
+  position: absolute;
+  width: calc(100% - 150px);
+  min-height: calc(100% - 50px - 75px);
+  padding-top: 75px;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+
+/* *******************************************************
+**********************************************************
+**************** New Box Modal Component******************
+**********************************************************
+******************************************************* */
+
+
+.mb-modal-footer {
+  /* margin-top: 20px; */
+  height: 60px;
+  background-color: black;
+}
+
+.footer-context {
+  color: #8FD7AC;
+  margin-left: 60px;
+}
+
+.mb-modal-footer .mb-button-primary {
+  margin-right: 60px;
+}
+
+
+.check-button-text {
+  align-self: center;
+}
+
+.check-button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* *******************************************************
+**********************************************************
+**************** New Card Modal Component*****************
+**********************************************************
+******************************************************* */
+
+
+.no-content {
+  width: calc(100% - 120px);
+  height: 200px;
+  border-style: dashed;
+  border-color: Add;
+  margin: 0 auto;
+  font-family: "RalewayRegular";
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.add-card-input {
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 20px;
+}
+
+.message-box {
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-family: "RalewayRegular";
+  font-size: 15px;
+  
+}
+
+.message p {
+  margin: 0;
+}
+
+.message + .mb-button-primary {
+  margin-right: 0;
+}
+
+.message-box .message {
+  margin: 0;
+  text-align: left;
+}
+
+.card-content {
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+.box-header {
+  
+  margin-bottom: 75px;
+}
+
+.box-header-name {
+  
+  margin-right: 75px;
+}
+
+
+
+.box-capacity {
+  font-family: "RalewayRegular";
+  width: fit-content;
+  margin: 0px;
+  font-size: 20px;
+  line-height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.box-star {
+  margin-right: 10px;
+}
+
+.box-star.small {
+  font-size: 20px;
+}
+
+.card {
+  font-family: "RalewayRegular";
+  width: fit-content;
+  margin: 0px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.commander {
+  background-color: #8FD7AC;
+}
+
+.popup-card {
+  font-family: "RalewayRegular";
+  width: fit-content;
+  margin: 0px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.card:last-child {
+  margin-bottom: 0px;
+}
+
+.card:hover .card-name, .card.hover .card-name { text-decoration: underline; }
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card-name {
+  margin-bottom: 5px;
+}
+
+.card-field {
+  font-size: 15px;
+  line-height: 15px;
+  margin-right: 20px;
+  min-width: 75px;
+}
+
+.discard-button {
+  margin-left: 0px;
+}
+
+
+/* *******************************************************
+**********************************************************
+**************** Show Card Modal Component****************
+**********************************************************
+******************************************************* */
+
+.width-50 {
+  width: calc(50% - 5px);
+}
+
+
+.card-image {
+  width: 100%;
+  max-width: 500px;
+}
+
+.special-width {
+  /* full width minus a 10px gap set in parent */
+  width: calc(100% - 10px);
+}
+

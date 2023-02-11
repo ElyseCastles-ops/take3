@@ -66,13 +66,13 @@ const NewCardModal = () => {
 
     const handleCreateNewCard = () => {
         if (newDict.length !== 0 || updateDict.length !== 0) {
-            addOrUpdateCards(newDict, updateDict, selectedBox).then(() => [
+            addOrUpdateCards(newDict, updateDict, selectedBox).then(() => {
                 updateBox(selectedBox, {fill: Number(fill)}).then(() => {
                     getBox(selectedBox?.id).then((box: Box) => {
                         dispatch(updateSelectedBox(box))
                     })
                 })
-            ]).then(() => {
+            }).then(() => {
                 getCards(selectedBox?.id).then((cardList: Card[]) => {
                     dispatch(loadCards(cardList))
                 })

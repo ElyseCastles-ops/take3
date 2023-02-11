@@ -9,6 +9,7 @@ import { goToBoxPage, loadAllBoxes, openDeleteBoxModal, openNewBoxModal } from "
 import { useAuth } from "../../context/AuthContext";
 import { loadCards } from "../cards/cardActions";
 import Card from "../cards/card";
+import { openErrorModal } from "../../error/errorActions";
 
 
 interface BoxesProps  {
@@ -47,7 +48,7 @@ const Boxes = (props: BoxesProps) => {
         if (boxLimit >= numBoxes + 1) {
             dispatch(openNewBoxModal())
         } else {
-            alert("You have reached your box limit.")
+            dispatch(openErrorModal("Box Limit Reached", `You have reached your box limit of ${boxLimit}.`))
         }
         
     }

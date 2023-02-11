@@ -344,6 +344,10 @@ h2 {
   overflow-y: scroll;
 }
 
+.mb-modal-body.no-scroll {
+  overflow-y: hidden;
+}
+
 .mb-modal-header {
   margin: 0px;
   margin-left: 60px;
@@ -1020,3 +1024,19 @@ h2 {
   width: calc(100% - 10px);
 }
 
+
+/* *******************************************************
+**********************************************************
+****************** Error Modal Component******************
+**********************************************************
+******************************************************* */
+
+.align-modal-content {
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 20px;
+}
+
+.error-modal {
+  height: 150px;
+}

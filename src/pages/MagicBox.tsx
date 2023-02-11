@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useAuth } from "../context/AuthContext";
+import ErrorModal from "../error/errorPopup";
 import Box from "./boxes/box";
 import { loadAllBoxes } from "./boxes/boxActions";
 import Boxes from "./boxes/boxCategory";
@@ -44,6 +45,7 @@ const MagicBox = () => {
             </div>
           <NewBoxModal />
           <DeleteBoxModal />
+          <ErrorModal />
         </div>
     )
 }

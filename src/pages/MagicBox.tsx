@@ -6,12 +6,13 @@ import { loadAllBoxes } from "./boxes/boxActions";
 import Boxes from "./boxes/boxCategory";
 import DeleteBoxModal from "./boxes/deleteBoxModal";
 import NewBoxModal from "./boxes/newBoxModal";
+import { setBoxLimit } from "./user/userActions";
 //import { useDispatch } from "react-redux";
 
 
 const MagicBox = () => {
 
-  const {getBoxes, user} = useAuth();
+  const {getBoxes, user, getBoxLimit} = useAuth();
   const dispatch = useDispatch();
 
   //const user = useSelector((state: RootState) => state.userManagement.user);
@@ -21,6 +22,11 @@ const MagicBox = () => {
         getBoxes(dispatch)
         .then((boxList: Box[]) => {
           dispatch(loadAllBoxes(boxList))
+        })
+        .then(() => {
+          getBoxLimit().then((boxLimit: number) => {
+            dispatch(setBoxLimit(boxLimit))
+        })
         })
     }
   }, [])

@@ -31,6 +31,7 @@ const Boxes = (props: BoxesProps) => {
     const boxes = useSelector((state: RootState) => state.boxReducer.boxes);
     const numBoxes = boxes.length
     let filteredBoxes = boxes;
+    const boxLimit = useSelector((state: RootState) => state.userReducer.boxLimit);
     //TODO: Fix to include all potential categories in the future
     if (category !== "ALL") {
         filteredBoxes = boxes.filter(box => box.category === category)
@@ -43,7 +44,12 @@ const Boxes = (props: BoxesProps) => {
     }
 
     const handleNewBox = () => {
-        dispatch(openNewBoxModal())
+        if (boxLimit >= numBoxes + 1) {
+            dispatch(openNewBoxModal())
+        } else {
+            alert("You have reached your box limit.")
+        }
+        
     }
 
     const handleBoxNavigate = (box: Box) => {
@@ -79,7 +85,7 @@ const Boxes = (props: BoxesProps) => {
                 {
                     category === "STARRED" && <div className="mb-d-flex mb-align-items-center">
                         <div className="mb-button-primary" onClick={handleNewBox}><p>Add New Box</p></div>
-                        <div>{numBoxes}/limit Boxes</div>
+                        <div>{numBoxes}/{boxLimit}</div>
                     </div>
                 }
                 

@@ -12,6 +12,7 @@ import storage from 'redux-persist/lib/storage';
 import { configureStore } from '@reduxjs/toolkit';
 import cardReducer from './pages/cards/cardReducer';
 import boxReducer from './pages/boxes/boxReducer';
+import userReducer from './pages/user/userReducer';
 
 const persistConfig = {
   key: 'root',
@@ -21,6 +22,7 @@ const persistConfig = {
 const reducers = combineReducers({
   boxReducer: boxReducer,
   cardReducer: cardReducer,
+  userReducer: userReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, reducers)
@@ -33,6 +35,7 @@ const store = configureStore({
 export type RootState = {
   boxReducer: ReturnType<typeof boxReducer>;
   cardReducer: ReturnType<typeof cardReducer>;
+  userReducer: ReturnType<typeof userReducer>;
 };
 
 export const persistor = persistStore(store);

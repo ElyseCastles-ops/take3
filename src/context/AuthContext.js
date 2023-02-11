@@ -16,9 +16,11 @@ import { collection,
     Firestore, 
     getDoc, 
     deleteDoc, 
-    collectionGroup } from "firebase/firestore";
+    collectionGroup, 
+    orderBy} from "firebase/firestore";
 import { boxConverter } from "../pages/boxes/box";
 import { cardConverter } from "../pages/cards/card";
+import { userConverter } from "../pages/user/user";
 //import { loadAllBoxes } from "../pages/boxes/boxActions";
 
 
@@ -49,6 +51,18 @@ export const AuthProvider = ({children}) => {
     //LOGIN
     const login = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    //GET BOX LIMIT
+    const getBoxLimit = async() => {
+        const docRef = doc(db, `/users/${user?.uid}`);
+        const docSnap = await getDoc(docRef)
+        if(docSnap.exists()) {
+            return docSnap.data().boxLimit;
+        } else {
+            return 0;
+        }
+        
     }
 
     const signup = async(email, password, dispatch, boxLimit) => {
@@ -120,7 +134,7 @@ export const AuthProvider = ({children}) => {
         
         const docRef = doc(db, "users", `${user?.uid}`);
 
-        const q = query(collection(db, `users/${user?.uid}/boxes`)).withConverter(boxConverter);
+        const q = query(collection(db, `users/${user?.uid}/boxes`), orderBy("name")).withConverter(boxConverter);
         const querySnapshot = await getDocs(q);
 
         let boxes = await querySnapshot.docs;
@@ -180,7 +194,7 @@ export const AuthProvider = ({children}) => {
 
     //GET ALL CARDS
     const getCards = async (boxId) => {
-        const q = query(collection(db, `users/${user?.uid}/boxes/${boxId}/cards`)).withConverter(cardConverter);
+        const q = query(collection(db, `users/${user?.uid}/boxes/${boxId}/cards`), orderBy("name")).withConverter(cardConverter);
         const querySnapshot = await getDocs(q);
 
         let cards = await querySnapshot.docs;
@@ -229,7 +243,8 @@ export const AuthProvider = ({children}) => {
             getBox,
             deleteCard,
             updateSingleCard,
-            addOrUpdateCards
+            addOrUpdateCards,
+            getBoxLimit
             }}>
             {children}
         </AuthContext.Provider>
